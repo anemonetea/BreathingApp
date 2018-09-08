@@ -31,25 +31,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 Log.d("STATUS", "Click");
-                int cc = seekBar.getProgress()*250;
+                int cc = seekBar.getProgress()*500;
                 if (!seekBar.isIndeterminate() && cc >= minScore)
                     score += cc;
                 Log.d("SCORE", Integer.valueOf(score).toString());
                 TextView lvl = findViewById(R.id.textView14);
                 lvl.setText(Integer.toString(level));
 
-                // Warning message about breathing in too deep
-                // Saying good job for breathing in the right amount
-                // Congratulatory message for leveling up
-                // Displaying the actual score?
-
                 progBar.setProgress(score);
+
+                TextView message = findViewById(R.id.textView11);
+                if (cc >= maxScore)
+                    message.setText("Be careful about inhaling too deep!");
+                else if (cc < maxScore && cc > minScore)
+                    message.setText("Great job!");
 
                 if (score >= minScore*4) {   // daily goal
                     progBar.setProgress(0);
                     level++;
                     score = 0;
+                    if (cc < maxScore)
+                        message.setText("Congratulations on leveling up! Your daily goal was met.");
                 }
+
+                // Displaying the actual score?
 
             }
 

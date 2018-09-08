@@ -6,19 +6,22 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     protected int score = 0;
-    protected int minScore = 250;   // will be set by the user in settings
+    protected int minScore = 2500;   // will be set by the user in settings
+    protected int level = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
 
         final ProgressBar progBar = findViewById(R.id.progressBar);
-        progBar.setMax(minScore);
+        progBar.setMax(minScore*4);
         progBar.setProgress(0);
 
         final SeekBar seekBar = findViewById(R.id.seekBar);
@@ -29,11 +32,15 @@ public class MainActivity extends AppCompatActivity {
                 if (!seekBar.isIndeterminate())
                     score += seekBar.getProgress()*250;
                 Log.d("SCORE", Integer.valueOf(score).toString());
-                if (!progBar.isIndeterminate())
-                    progBar.setProgress(score / minScore);
+                TextView lvl = findViewById(R.id.textView14);
+                lvl.setText(Integer.toString(level));
 
-                if (score > minScore)
+                progBar.setProgress(score);
+
+                if (score > minScore*4) {
                     progBar.setProgress(0);
+                    level++;
+                }
 
             }
 

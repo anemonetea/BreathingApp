@@ -16,4 +16,7 @@
     <string name="num11">2500</string>
     <string name="current_prog_txt">CURRENT PROGRESS</string>
     <string name="daily_prog_txt">DAILY PROGRESS</string>
+    <string name="setting_btn">Settings</string>
+    <string name="lvl">1</string>
+    <string name="lvl_text">Level:</string>
 </resources>

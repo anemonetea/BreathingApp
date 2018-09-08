@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">BreathingApp</string>
+    <string name="achieve_btn">Achievements</string>
+    <string name="home_btn">Home</string>
+    <string name="result_btn">Results</string>
+    <string name="num1">250</string>
+    <string name="num0">0</string>
+    <string name="num2">500</string>
+    <string name="num4">750</string>
+    <string name="num5">1000</string>
+    <string name="num6">1250</string>
+    <string name="num7">1500</string>
+    <string name="num8">1750</string>
+    <string name="num9">2000</string>
+    <string name="num10">2250</string>
+    <string name="num11">2500</string>
+    <string name="current_prog_txt">CURRENT PROGRESS</string>
+    <string name="daily_prog_txt">DAILY PROGRESS</string>
 </resources>

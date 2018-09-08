@@ -11,7 +11,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     protected int score = 0;
-    protected int minScore = 2500;   // will be set by the user in settings
+    protected int minScore = 500;   // will be set by the user in settings
+    protected int maxScore = 3000;
     protected int level = 1;
 
     @Override
@@ -23,23 +24,31 @@ public class MainActivity extends AppCompatActivity {
         final ProgressBar progBar = findViewById(R.id.progressBar);
         progBar.setMax(minScore*4);
         progBar.setProgress(0);
+        progBar.refreshDrawableState();
 
         final SeekBar seekBar = findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 Log.d("STATUS", "Click");
-                if (!seekBar.isIndeterminate())
-                    score += seekBar.getProgress()*250;
+                int cc = seekBar.getProgress()*250;
+                if (!seekBar.isIndeterminate() && cc >= minScore)
+                    score += cc;
                 Log.d("SCORE", Integer.valueOf(score).toString());
                 TextView lvl = findViewById(R.id.textView14);
                 lvl.setText(Integer.toString(level));
 
+                // Warning message about breathing in too deep
+                // Saying good job for breathing in the right amount
+                // Congratulatory message for leveling up
+                // Displaying the actual score?
+
                 progBar.setProgress(score);
 
-                if (score > minScore*4) {
+                if (score >= minScore*4) {   // daily goal
                     progBar.setProgress(0);
                     level++;
+                    score = 0;
                 }
 
             }

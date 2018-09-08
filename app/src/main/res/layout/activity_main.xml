@@ -139,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:max="10"
+            android:max="8"
             android:progress="3" />
 
         <LinearLayout
@@ -152,7 +152,7 @@
                 android:id="@+id/divider10"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5" />
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -166,7 +166,7 @@
                 android:id="@+id/divider9"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5" />
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -180,7 +180,7 @@
                 android:id="@+id/divider11"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight=".4" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -191,10 +191,10 @@
                 android:textSize="12sp" />
 
             <View
-                android:id="@+id/divider21"
+                android:id="@+id/divider20"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".5" />
+                android:layout_weight=".3" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -208,7 +208,7 @@
                 android:id="@+id/divider22"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".4" />
+                android:layout_weight=".3" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -218,6 +218,13 @@
                 android:text="@string/num5"
                 android:textSize="12sp" />
 
+            <View
+                android:id="@+id/divider27"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:background="?android:attr/listDivider" />
+
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
@@ -226,6 +233,12 @@
                 android:text="@string/num6"
                 android:textSize="12sp" />
 
+            <View
+                android:id="@+id/divider21"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -233,6 +246,13 @@
                 android:layout_weight="1"
                 android:text="@string/num7"
                 android:textSize="12sp" />
+
+            <View
+                android:id="@+id/divider28"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -250,21 +270,6 @@
                 android:text="@string/num9"
                 android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/num10"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/num11"
-                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout

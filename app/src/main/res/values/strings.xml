@@ -19,4 +19,6 @@
     <string name="setting_btn">Settings</string>
     <string name="lvl">1</string>
     <string name="lvl_text">Level:</string>
+    <string name="welcome_msg">Welcome!</string>
+    <string name="vals">Please enter values:</string>
 </resources>

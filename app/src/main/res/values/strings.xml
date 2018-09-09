@@ -19,6 +19,10 @@
     <string name="setting_btn">Settings</string>
     <string name="lvl">1</string>
     <string name="lvl_text">Level:</string>
+<<<<<<< HEAD
     <string name="welcome_msg">Welcome!</string>
     <string name="vals">Please enter values:</string>
+=======
+    <string name="Results_text">Your results for the past 5 days:</string>
+>>>>>>> 6d1ffdb30a3f20329cf81d91672319024122b5c2
 </resources>

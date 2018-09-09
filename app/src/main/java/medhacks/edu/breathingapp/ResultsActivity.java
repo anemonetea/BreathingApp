@@ -36,10 +36,10 @@ public class ResultsActivity extends AppCompatActivity {
         graph.addSeries(series);
 */
         BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 3000), // stand-in values
-                new DataPoint(1, 2500),
-                new DataPoint(2, 3500),
-                new DataPoint(3, 2500),
+                new DataPoint(0, 15000), // stand-in values
+                new DataPoint(1, 14500),
+                new DataPoint(2, 16000),
+                new DataPoint(3, 15000),
                 new DataPoint(4, myData.get(0).score)
         });
         graph.addSeries(series);

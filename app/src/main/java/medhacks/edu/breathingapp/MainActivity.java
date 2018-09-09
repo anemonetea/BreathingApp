@@ -1,9 +1,11 @@
 package medhacks.edu.breathingapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -14,12 +16,17 @@ public class MainActivity extends AppCompatActivity {
     protected int minScore = 500;   // will be set by the user in settings
     protected int maxScore = 3000;
     protected int level = 1;
+    private static Day day;
+    protected static Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
+        day = new Day(score, level);
+        this.database = new Database();
+        this.database.putDayData(day);
 
         final ProgressBar progBar = findViewById(R.id.progressBar);
         progBar.setMax(minScore*4);
@@ -49,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 if (score >= minScore*4) {   // daily goal
                     progBar.setProgress(0);
                     level++;
+                    day.incrementScore(score);
+                    day.updateLevel(level);
+                    Log.d("DATA", "Current score in data: " + Integer.toString(day.score));
                     score = 0;
                     if (cc < maxScore)
                         message.setText("Congratulations on leveling up! Your daily goal was met.");
@@ -69,16 +79,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton results_btn = findViewById(R.id.imageButton3);
+        results_btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ResultsActivity.class));
+            }
+        });
 
         Log.d("STATUS","View configured.");
 
     }
-
-    public int getCC(){
-        SeekBar seekBar = findViewById(R.id.seekBar);
-        int cc = -1; // value if seekBar is in an intermediate state
-        if (!seekBar.isIndeterminate())
-            cc = seekBar.getProgress();
-        return cc;
+/*
+    public void resultsButton(View view) {
+        ImageButton results_btn = findViewById(R.id.imageButton3);
+        Intent intent = new Intent(this, ResultsActivity.class);
+        startActivity(intent);
     }
+*/
 }

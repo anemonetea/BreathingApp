@@ -19,4 +19,5 @@
     <string name="setting_btn">Settings</string>
     <string name="lvl">1</string>
     <string name="lvl_text">Level:</string>
+    <string name="Results_text">Your results for the past 5 days:</string>
 </resources>

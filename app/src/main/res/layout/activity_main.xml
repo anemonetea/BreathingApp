@@ -82,11 +82,12 @@
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
+            android:layout_width="37dp"
+            android:layout_height="35dp"
             android:background="@drawable/ic_action_gear_off"
-            android:contentDescription="@string/setting_btn" />
+            android:contentDescription="@string/setting_btn"
+            tools:layout_editor_absoluteX="368dp"
+            tools:layout_editor_absoluteY="460dp"/>
 
         <View
             android:id="@+id/divider26"

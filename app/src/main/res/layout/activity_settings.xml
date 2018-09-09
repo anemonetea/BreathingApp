@@ -105,9 +105,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="36dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -134,20 +135,19 @@
             android:layout_weight="0" />
 
         <!--<SeekBar-->
-            <!--android:id="@+id/seekBar"-->
-            <!--style="@style/Widget.AppCompat.SeekBar.Discrete"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0"-->
-            <!--android:max="8"-->
-            <!--android:progress="3" />-->
+        <!--android:id="@+id/seekBar"-->
+        <!--style="@style/Widget.AppCompat.SeekBar.Discrete"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0"-->
+        <!--android:max="8"-->
+        <!--android:progress="3" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="17dp"
             android:layout_weight="0"
             android:orientation="horizontal">
-
 
 
         </LinearLayout>
@@ -166,17 +166,11 @@
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="23dp"
                 android:fontFamily="sans-serif-condensed"
-                android:gravity="Left"
+                android:gravity="start"
                 android:text="@string/vals"
-                android:textSize="18sp" />
-
-            <View
-                android:id="@+id/divider25"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
-
+                android:textSize="20sp" />
 
 
             <View
@@ -186,17 +180,48 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="89dp"
+                android:layout_height="56dp"
                 android:orientation="horizontal">
 
-                <View
-                    android:id="@+id/divider17"
-                    android:layout_width="1dp"
-                    android:layout_height="133dp"
-                    android:layout_weight="7" />
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="   Current Min:" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:contentDescription="@string/setting_btn"
+                    android:text="Enter" />
 
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:orientation="horizontal">
 
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="   Goal:" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Enter" />
             </LinearLayout>
 
             <TextView

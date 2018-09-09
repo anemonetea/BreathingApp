@@ -88,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton setting_btn = findViewById(R.id.imageButton4);
+        setting_btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+            }
+        });
+
         Log.d("STATUS","View configured.");
 
     }

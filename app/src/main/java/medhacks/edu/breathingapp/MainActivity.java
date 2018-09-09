@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     protected int score = 0;
-    protected int minScore = 500;   // will be set by the user in settings
+    protected int minScore = 1000;   // will be set by the user in settings
     protected int maxScore = 3000;
     protected int level = 1;
     private static Day day;
